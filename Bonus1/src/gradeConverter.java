@@ -8,30 +8,33 @@ public class gradeConverter {
 
 		int numberGrade;
 
-		String answer = "y";
+		String answer = "yes";
+		
+		System.out.println("Welcome to the Letter Grade Converter!");
 
-		while (answer.equalsIgnoreCase("y")) {
-
-			System.out.println("Welcome to the Letter Grade Converter! \nEnter a numerical grade as a whole number:");
+		while (answer.equalsIgnoreCase("yes")) {
+			
+			System.out.println("Enter a numerical grade as a whole number:");
 
 			numberGrade = scan1.nextInt();
+			scan1.nextLine();
 			
 			if (numberGrade >= 90) {
 				
 				System.out.println("Your letter grade is A.");
 			}
 			
-			else if (numberGrade <90 && numberGrade >79) {
+			else if (numberGrade >79) {
 				
 				System.out.println("Your letter grade is B.");
 			}
 			
-			else if (numberGrade <80 && numberGrade >69) {
+			else if (numberGrade >69) {
 				
 				System.out.println("Your letter grade is C.");
 			}
 			
-			else if (numberGrade <70 && numberGrade >59) {
+			else if (numberGrade >59) {
 				
 				System.out.println("Your letter grade is a D.");
 			}
@@ -43,12 +46,13 @@ public class gradeConverter {
 			
 			System.out.println("Do you want to enter another grade?");
 			
-			answer = scan1.next();
+			answer = scan1.nextLine();
 			
-			scan1.close();
-
 		}
+		
+		System.out.println("Goodbye!");
 
+		scan1.close();
 	}
 
 }
